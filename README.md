@@ -6,7 +6,7 @@
 
 This is a specialized fork of the popular Open Deep Research agent, customized for restaurant business planning and strategy development. It combines the powerful research capabilities of the original agent with image generation for menu items and storefront visualization, plus PDF report generation for comprehensive business plans.
 
-<img width="817" height="666" alt="Screenshot 2025-07-13 at 11 21 12 PM" src="https://github.com/user-attachments/assets/052f2ed3-c664-4a4f-8ec2-074349dcaa3f" />
+![Restaurant Researcher](./researcher.png)
 
 ## 🎆 Restaurant Agent Features
 
