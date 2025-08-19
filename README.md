@@ -1,12 +1,24 @@
-# 🔬 Open Deep Research
+# 🍽️ Restaurant Research Agent
+
+*A specialized fork of [LangChain's Open Deep Research](https://github.com/langchain-ai/open_deep_research) for restaurant business planning*
 
 <img width="1388" height="298" alt="full_diagram" src="https://github.com/user-attachments/assets/12a2371b-8be2-4219-9b48-90503eb43c69" />
 
-Deep research has broken out as one of the most popular agent applications. This is a simple, configurable, fully open source deep research agent that works across many model providers, search tools, and MCP servers. It's performance is on par with many popular deep research agents ([see Deep Research Bench leaderboard](https://huggingface.co/spaces/Ayanami0730/DeepResearch-Leaderboard)).
+This is a specialized fork of the popular Open Deep Research agent, customized for restaurant business planning and strategy development. It combines the powerful research capabilities of the original agent with image generation for menu items and storefront visualization, plus PDF report generation for comprehensive business plans.
 
 <img width="817" height="666" alt="Screenshot 2025-07-13 at 11 21 12 PM" src="https://github.com/user-attachments/assets/052f2ed3-c664-4a4f-8ec2-074349dcaa3f" />
 
-### 🔥 Recent Updates
+## 🎆 Restaurant Agent Features
+
+This specialized fork adds the following capabilities for restaurant business planning:
+
+- **🔍 Comprehensive Research**: Uses the full power of Open Deep Research to analyze market conditions, competition, location factors, and business strategies
+- **🍽️ Menu Generation**: Creates detailed menu items with recipes and pricing based on research findings
+- **🖼️ Image Generation**: Automatically generates appealing food images for each menu item using GPT-5's image generation capabilities
+- **🏢 Storefront Visualization**: Transforms storefront photos into restaurant concept renderings
+- **📊 PDF Reports**: Exports comprehensive business plans as professional PDF documents combining research, menu, and visuals
+
+### 🔥 Original Project Updates
 
 **August 7, 2025**: Added GPT-5 and updated the Deep Research Bench evaluation w/ GPT-5 results.
 
@@ -16,12 +28,12 @@ Deep research has broken out as one of the most popular agent applications. This
 
 **July 16, 2025**: Read more in our [blog](https://blog.langchain.com/open-deep-research/) and watch our [video](https://www.youtube.com/watch?v=agGiWUpxkhg) for a quick overview.
 
-### 🚀 Quickstart
+### 🚀 Restaurant Agent Quickstart
 
 1. Clone the repository and activate a virtual environment:
 ```bash
-git clone https://github.com/langchain-ai/open_deep_research.git
-cd open_deep_research
+git clone https://github.com/victormoreira/open_deep_research_restaurant_fork.git
+cd open_deep_research_restaurant_fork
 uv venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
@@ -53,7 +65,44 @@ This will open the LangGraph Studio UI in your browser.
 - 📚 API Docs: http://127.0.0.1:2024/docs
 ```
 
-Ask a question in the `messages` input field and click `Submit`. Select different configuration in the "Manage Assistants" tab.
+Ask a restaurant research question in the `messages` input field and click `Submit`. For example: "Help me plan a seafood restaurant at Pier 39 in San Francisco."
+
+#### 🍽️ Running the Restaurant Agent Directly
+
+To run the specialized restaurant researcher:
+
+```bash
+# Run the restaurant agent with a storefront image
+python src/open_deep_research/restaurant_agent/restaurant_researcher.py
+```
+
+This will:
+1. Generate a comprehensive restaurant business plan using the main research agent
+2. Create a sample menu with recipes and pricing
+3. Generate images for each menu item
+4. Create a storefront visualization
+5. Export everything to a professional PDF report
+
+Outputs:
+- `report.md` - Business strategy and analysis
+- `menu2.json` - Menu items with images
+- `storefront.txt` - Storefront rendering
+- `restaurant_report.pdf` - Combined PDF report
+
+#### 📊 Generating PDF Reports
+
+To convert research outputs to PDF:
+
+```bash
+python src/open_deep_research/restaurant_agent/generate_pdf.py
+```
+
+### ⚙️ Restaurant Agent Structure
+
+The restaurant agent extends the core research capabilities with:
+
+- `src/open_deep_research/restaurant_agent/restaurant_researcher.py` - Main restaurant research workflow
+- `src/open_deep_research/restaurant_agent/generate_pdf.py` - PDF generation utilities
 
 ### ⚙️ Configurations
 

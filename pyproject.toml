@@ -44,6 +44,10 @@ dependencies = [
     "mcp>=1.9.4",
     "langchain-aws>=0.2.28",
     "pandas>=2.3.1",
+    "langgraph-supervisor>=0.0.29",
+    "markdown2>=2.5.4",
+    "weasyprint>=66.0",
+    "pypdf2>=3.0.1",
 ]
 
 [project.optional-dependencies]
